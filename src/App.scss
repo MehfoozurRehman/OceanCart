@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+$primary: #f3f3f3;
+$font-color: #374957;
+$dark: #04dfe6;
+$highlite: #57d871;
+$blips: $font-color;
+$light-green: #f3f9f9;
+$nav-pills-link-active-bg: black !important;
+$heading-font-size: 18px;
+$normal-font-size: 14px;
+$xl-heading: $heading-font-size + 5px;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.App {
+  width: 100vw;
+  min-height: 100vh;
+}
+.container {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1440px;
+  position: relative;
+}
+.form__btn {
+  background: linear-gradient(90deg, $dark, $highlite);
+  border: none;
+  color: $primary;
+  font-weight: bold;
+  font-size: $normal-font-size;
+  border-radius: 10px;
+  padding: 0em 2em;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__btn:hover {
+  transition: 100ms ease-in-out;
+  background: linear-gradient(90deg, #02c4ca, #51bd67);
+}
+.gender__card {
+  width: 30%;
+  height: 200px;
+  background-color: $dark;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em;
+  padding-right: 0em;
+}
+.gender__Card__img {
+  margin-right: 2em;
+}
+.gender__Card__placeholder {
+  font-size: $xl-heading;
+  font-weight: bold;
+  color: $primary;
+}
+.nav__link__vertical {
+  font-size: $heading-font-size !important;
+  color: $font-color !important;
+  white-space: nowrap !important;
+  margin-right: 2em;
+}
+.nav__link__vertical:hover {
+  font-weight: bold !important;
+  color: black !important;
+}
+.product__card {
+  width: 300px;
+  height: fit-content;
+  border-radius: 10px;
+  margin-bottom: 3em;
+  background-color: #ffffff;
+}
+.product__card__img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.product__card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.product__card__content__offer {
+  background-color: $highlite;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  line-height: 22px;
+  position: absolute;
+  top: -40px;
+  right: 20px;
+}
+.product__card__content__offer .span__offer {
+  font-size: $xl-heading;
+}
+.product__card__content__name {
+  font-size: $heading-font-size;
+  font-weight: bold;
+  color: $font-color;
+  width: 100%;
+  text-transform: capitalize;
+  margin-bottom: 0.8em;
+}
+.product__card__content__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.product__card__content__old__price {
+  font-size: $heading-font-size;
+  text-decoration: line-through;
+  color: gray;
+}
+.product__card__content__new__price {
+  font-size: $xl-heading;
+  color: $font-color;
+  font-weight: bold;
+}
+@media (max-width: 1220px) {
+  .gender__card {
+    width: 48%;
+    margin-bottom: 8em;
+  }
+}
+@media (max-width: 920px) {
+  .gender__card {
+    width: 90%;
+    margin-bottom: 8em;
+  }
+  .product__card {
+    width: 80%;
+  }
+}
+@import "~bootstrap/scss/bootstrap";
