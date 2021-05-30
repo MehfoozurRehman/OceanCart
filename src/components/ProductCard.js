@@ -1,5 +1,6 @@
 import React from "react";
 import BtnComponent from "./BtnComponent";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({
   imgURL,
@@ -7,9 +8,10 @@ export default function ProductCard({
   oldPrice,
   newPrice,
   offer,
+  toPath,
 }) {
   return (
-    <div className="product__card">
+    <Link to={toPath} className="product__card">
       <img
         src={imgURL}
         alt="product__card__img"
@@ -83,6 +85,6 @@ export default function ProductCard({
           }}
         />
       </div>
-    </div>
+    </Link>
   );
 }

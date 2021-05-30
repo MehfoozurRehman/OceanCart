@@ -11,10 +11,13 @@ import productImg from "../assets/productPic.png";
 import bannerPic from "../assets/bannerPic.png";
 import main__product__img from "../assets/main__product__img.png";
 import StarRatings from "react-star-ratings";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <>
+      <Header />
       <div className="hero__section">
         <img
           src={HomeBG}
@@ -143,7 +146,12 @@ export default function Home() {
             <button className="product__catagories__more__btn">View All</button>
           </div>
         </div>
-        <img src={bannerPic} alt="bannerPic" className="banner__pic" />
+        <div className="sale__banner">
+          <img src={bannerPic} alt="bannerPic" className="sale__banner__pic" />
+          <div className="sale__banner__overlay">
+            <button className="sale__banner__overlay__btn">Shop Now</button>
+          </div>
+        </div>
         <div className="main__product">
           <img
             src={main__product__img}
@@ -440,6 +448,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

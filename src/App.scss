@@ -32,6 +32,157 @@ body {
   max-width: 1440px;
   position: relative;
 }
+.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+.brand__name {
+  font-size: 35px !important;
+  font-weight: bold !important;
+  margin-right: 1em;
+  color: $highlite !important;
+}
+.brand__name:hover {
+  color: darken($highlite, 20%);
+}
+.catagory__select {
+  width: 150px;
+}
+.catagory__select * {
+  color: $primary !important;
+  background-color: rgba(3, 67, 69, 0.9) !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer !important;
+  border-radius: 8px !important;
+  font-size: $normal-font-size !important;
+}
+.nav__bar {
+  background-color: transparent !important;
+  padding: 1em 5em !important;
+  position: relative;
+}
+.nav__bar__solid {
+  background-color: white !important;
+  padding: 1em 5em !important;
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.active__reverse {
+  background-color: $primary !important;
+}
+.nav__link {
+  color: $primary !important;
+  font-weight: 400;
+  font-size: $normal-font-size !important;
+  background-color: rgba(3, 67, 69, 0.9) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.8em !important;
+  border-radius: 8px;
+  margin: 0em 1em;
+}
+.nav__link svg {
+  width: 20px;
+  height: 20px;
+}
+.nav__link:hover {
+  transition: 200ms;
+  color: $dark !important;
+}
+.active__reverse .nav__link {
+  color: $font-color !important;
+}
+.active__reverse .nav__link:hover {
+  color: $dark !important;
+}
+.header__form {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  height: fit-content;
+  width: 50% !important;
+  position: absolute;
+  left: 25%;
+  top: 1.4em;
+  border-radius: 10px;
+}
+.header__form__input {
+  height: 50px;
+  border: 1px solid $font-color;
+  font-size: $normal-font-size;
+  border-radius: 10px;
+  padding: 0em 1em;
+  outline: none;
+  width: 80%;
+}
+.header__form__input:focus {
+  border-color: $dark;
+}
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 4em 0em;
+  padding: 1em 2em;
+}
+.footer__col__line {
+  width: 100px;
+  height: 5px;
+  background-color: $highlite;
+  border-radius: 8px;
+  margin-bottom: 0.8em;
+}
+.footer__link {
+  font-size: $normal-font-size !important;
+  color: $font-color !important;
+  text-transform: capitalize !important;
+  padding: 0.6em 0em;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+.footer__link:hover {
+  color: black !important;
+}
+.footer__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid $font-color;
+  border-radius: 10px;
+  padding: 0em 1em;
+  font-size: $normal-font-size;
+  outline: none;
+}
+.footer__input:hover {
+  border-color: black;
+}
+.footer__input:focus {
+  border-color: $highlite;
+}
+.footer__social__link__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  margin: 0.7em 0em;
+}
+.footer__social__link svg {
+  width: 25px;
+  height: 25px;
+}
+.footer__col__brand__name {
+  width: 150px !important;
+  color: $highlite !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
+  text-align: right !important;
+  text-decoration: none !important;
+}
+.footer__col__brand__name:hover {
+  color: darken($highlite, 20%) !important;
+}
 .form__btn {
   background: linear-gradient(90deg, $dark, $highlite);
   border: none;
@@ -79,14 +230,19 @@ body {
   color: black !important;
 }
 .product__card {
-  width: 300px;
+  width: 280px;
   height: fit-content;
   border-radius: 10px;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
   background-color: #ffffff;
+  text-decoration: none !important;
+}
+.product__card:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 .product__card__img {
   width: 100%;
+  height: 250px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -158,5 +314,24 @@ body {
   .product__card {
     width: 80%;
   }
+  .nav__link {
+    margin-bottom: 1em;
+  }
+  .nav__bar {
+    padding: 0.5em 2em !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+  .header__form {
+    flex-direction: column;
+    position: relative;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+  }
+  .header__form__input {
+    margin-bottom: 1em;
+  }
 }
+
 @import "~bootstrap/scss/bootstrap";
