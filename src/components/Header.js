@@ -81,7 +81,7 @@ export default function Header({ search }) {
               />
             </svg>
           </Nav.Link>
-          <Nav.Link as={Link} to="/coffee-corner" className="nav__link">
+          <Nav.Link as={Link} to="/login" className="nav__link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"

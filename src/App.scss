@@ -300,6 +300,23 @@ body {
   color: $font-color;
   font-weight: bold;
 }
+.login__form__input {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 8px;
+  height: 45px;
+  border: 1px solid $primary;
+  background-color: $primary;
+  padding: 0em 1.5em;
+  outline: none;
+}
+.login__form__input:hover {
+  border-color: $font-color;
+}
+.login__form__input:focus {
+  border-color: $highlite;
+}
+
 @media (max-width: 1220px) {
   .gender__card {
     width: 48%;
