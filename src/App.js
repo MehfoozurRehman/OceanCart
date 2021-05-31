@@ -5,7 +5,8 @@ import Products from "./pages/Products";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import ProductDetails from "./pages/ProductDetails";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/forgot-password">
             <ForgotPassword />
+          </Route>
+          <Route path="/product-details">
+            <ProductDetails />
           </Route>
         </Switch>
       </div>
