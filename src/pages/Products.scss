@@ -195,3 +195,15 @@
 .search__result__container__vacancies-filter-panel-catagory-heading:hover {
   color: #049dff !important;
 }
+@media (max-width: 920px) {
+  .products__page {
+    flex-direction: column;
+  }
+  .search__result__container__vacancies-filter-panel {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .products__page__content {
+    flex-direction: column;
+  }
+}

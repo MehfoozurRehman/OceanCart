@@ -4,6 +4,7 @@ import { Link, Route, Switch } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import productImg from "../assets/productPic.png";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import img from "../assets/productPic.png";
 import imgLarge from "../assets/productPicLarge.png";
 import img1 from "../assets/productPicSuggestion.jpg";
@@ -591,6 +592,7 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
