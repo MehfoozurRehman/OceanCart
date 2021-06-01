@@ -1,7 +1,7 @@
 import React from "react";
 import "./Auth.scss";
 import Header from "../components/Header";
-import LoginBG from "../assets/LoginBG.png";
+import HomeBG from "../assets/HomeBG.png";
 import InputBox from "../components/InputBox";
 import LoginButton from "../components/BtnComponent";
 import { Link } from "react-router-dom";
@@ -12,7 +12,7 @@ export default function Login() {
     <>
       <Header />
       <div className="login__page">
-        <img src={LoginBG} alt="login__bg" />
+        <img src={HomeBG} alt="login__bg" />
         <div className="login__bg__overlay">
           <form className="login__form">
             <div className="login__form__heading">Sign Up</div>
@@ -33,15 +33,17 @@ export default function Login() {
             />
             <div className="login__form__row">
               <input
-                className="search__result__container__vacancies-filter-panel-catagory-checkbox"
+                className="login__form__checkbox"
                 id="styled-checkbox-1"
                 type="checkbox"
                 value="value1"
               />
-              <label htmlFor="styled-checkbox-1">I agree to <Link className="login__form__row__terms" to="/about">
-             Terms & conditions
-              </Link></label>
-              
+              <label htmlFor="styled-checkbox-1">
+                I agree to{" "}
+                <Link className="login__form__row__terms" to="/about">
+                  Terms & conditions
+                </Link>
+              </label>
             </div>
             <Link to="/" style={{ textDecoration: "none" }}>
               <BtnComponent

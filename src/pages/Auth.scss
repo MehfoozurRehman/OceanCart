@@ -16,6 +16,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 164, 170, 0.5),
+    rgba(65, 155, 83, 0.5)
+  );
 }
 .login__form {
   width: 100%;
@@ -23,7 +28,7 @@
   background-color: white;
   border-radius: 10px;
   max-width: 700px;
-  padding: 3em 10em;
+  padding: 3em 8em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +47,7 @@
   text-decoration: underline;
   color: black;
 }
-.search__result__container__vacancies-filter-panel-catagory-checkbox {
+.login__form__checkbox {
   position: absolute; // take it out of document flow
   opacity: 0; // hide it
 
@@ -50,39 +55,34 @@
     position: relative;
     cursor: pointer;
     padding: 0;
-    color: #777777;
-    font-size: 12px;
     user-select: none;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 2em;
-    margin-bottom: 1em;
   }
 
   // Box.
-  & + label:after {
+  & + label:before {
     content: "";
+    margin-right: 10px;
     display: inline-block;
     vertical-align: text-top;
     width: 20px;
     height: 20px;
-    background: #e1e1e1;
+    background: $primary;
     border-radius: 5px;
   }
 
   // Box hover
-  &:hover + label:after {
-    background: #049dff;
+  &:hover + label:before {
+    background: $highlite;
   }
 
   // Box focus
-  &:focus + label:after {
+  &:focus + label:before {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
   }
 
   // Box checked
-  &:checked + label:after {
-    background: #049dff;
+  &:checked + label:before {
+    background: $highlite;
   }
 
   // Disabled state label.
@@ -92,17 +92,17 @@
   }
 
   // Disabled box.
-  &:disabled + label:after {
+  &:disabled + label:before {
     box-shadow: none;
     background: #ddd;
   }
 
   // Checkmark. Could be replaced with an image
-  &:checked + label:before {
+  &:checked + label:after {
     content: "";
     position: absolute;
-    right: 13px;
-    top: 9px;
+    left: 5px;
+    top: 11px;
     background: white;
     width: 2px;
     height: 2px;

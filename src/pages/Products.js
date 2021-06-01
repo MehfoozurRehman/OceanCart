@@ -6,6 +6,7 @@ import ProductCard from "../components/ProductCard";
 import productImg from "../assets/productPic.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import HomeBG from "../assets/HomeBG.png";
 
 export default function Home() {
   return (
@@ -384,6 +385,53 @@ export default function Home() {
             </svg>
             <div className="customer__link__label">Easy Return & Exchange</div>
           </Link>
+        </div>
+      </div>
+      <div className="hero__section__reverse">
+        <img
+          src={HomeBG}
+          alt="hero__section__bg"
+          className="hero__section__bg"
+        />
+        <div className="hero__section__overlay__reverse">
+          <div className="product__catagories__heading__row">
+            <div className="product__catagories__heading">Items on SALE</div>
+            <div className="product__catagories__time__stamp">
+              <span>Time Remaining</span>
+              <div className="product__catagories__time__stamp__time">
+                <div className="time__value">1</div>
+                <div className="time__value">2</div>:
+                <div className="time__value">3</div>
+                <div className="time__value">0</div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="product__catagories__content__row"
+            style={{ width: "65%" }}
+          >
+            <ProductCard
+              imgURL={productImg}
+              name="product name"
+              oldPrice="$20.20"
+              newPrice="$34.20"
+              offer="10"
+            />
+            <ProductCard
+              imgURL={productImg}
+              name="product name"
+              oldPrice="$20.20"
+              newPrice="$34.20"
+              offer="10"
+            />
+            <ProductCard
+              imgURL={productImg}
+              name="product name"
+              oldPrice="$20.20"
+              newPrice="$34.20"
+              offer="10"
+            />
+          </div>
         </div>
       </div>
       <Footer />

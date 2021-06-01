@@ -11,7 +11,7 @@ export default function ProductCard({
   toPath,
 }) {
   return (
-    <Link to={toPath} className="product__card">
+    <Link to="/product-details" className="product__card">
       <img
         src={imgURL}
         alt="product__card__img"
