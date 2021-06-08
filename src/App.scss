@@ -357,7 +357,12 @@ body {
   font-size: $normal-font-size;
   color: $font-color;
 }
-
+.out__of__stock__btn {
+  width: 50% !important;
+  background-color: $font-color !important;
+  color: $primary !important;
+  height: 45px !important;
+}
 @media (max-width: 1220px) {
   .gender__card {
     width: 48%;

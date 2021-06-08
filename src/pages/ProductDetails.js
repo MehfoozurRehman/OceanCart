@@ -20,7 +20,7 @@ import imgLarge5 from "../assets/productPicLarge.png";
 import HomeBG from "../assets/HomeBG.png";
 import StarRatings from "react-star-ratings";
 import BtnComponent from "../components/BtnComponent";
-import { Nav } from "react-bootstrap";
+import { Nav, Button } from "react-bootstrap";
 import ProductReview from "../components/ProductReview";
 import {
   Magnifier,
@@ -69,6 +69,7 @@ function SizePicker({ placeholder }) {
 export default function ProductDetails() {
   const [imgLink, setImgLink] = useState(img);
   const [imgLinkLarge, setImgLinkLarge] = useState(imgLarge);
+  const isInStock = true;
   return (
     <>
       <Header search={true} />
@@ -304,61 +305,65 @@ export default function ProductDetails() {
                 starSpacing="5px"
                 starRatedColor="#50D9C2"
               />
-              <BtnComponent
-                placeholder="Add to Cart"
-                icon={
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="21.452"
-                    height="20.614"
-                    viewBox="0 0 21.452 20.614"
-                  >
-                    <g
-                      id="Icon_feather-shopping-cart"
-                      data-name="Icon feather-shopping-cart"
-                      transform="translate(1.5 1.5)"
+              {isInStock ? (
+                <BtnComponent
+                  placeholder="Add to Cart"
+                  icon={
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21.452"
+                      height="20.614"
+                      viewBox="0 0 21.452 20.614"
                     >
-                      <path
-                        id="Path_636"
-                        data-name="Path 636"
-                        d="M13.677,30.839A.839.839,0,1,1,12.839,30,.839.839,0,0,1,13.677,30.839Z"
-                        transform="translate(-6.129 -14.064)"
-                        fill="none"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="3"
-                      />
-                      <path
-                        id="Path_637"
-                        data-name="Path 637"
-                        d="M30.177,30.839A.839.839,0,1,1,29.339,30,.839.839,0,0,1,30.177,30.839Z"
-                        transform="translate(-13.403 -14.064)"
-                        fill="none"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="3"
-                      />
-                      <path
-                        id="Path_638"
-                        data-name="Path 638"
-                        d="M1.5,1.5H4.855L7.1,12.731a1.677,1.677,0,0,0,1.677,1.35h8.153a1.677,1.677,0,0,0,1.677-1.35l1.342-7.037H5.694"
-                        transform="translate(-1.5 -1.5)"
-                        fill="none"
-                        stroke="#fff"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="3"
-                      />
-                    </g>
-                  </svg>
-                }
-                btnStyle={{
-                  width: "50%",
-                  justifyContent: "space-between",
-                }}
-              />
+                      <g
+                        id="Icon_feather-shopping-cart"
+                        data-name="Icon feather-shopping-cart"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <path
+                          id="Path_636"
+                          data-name="Path 636"
+                          d="M13.677,30.839A.839.839,0,1,1,12.839,30,.839.839,0,0,1,13.677,30.839Z"
+                          transform="translate(-6.129 -14.064)"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="3"
+                        />
+                        <path
+                          id="Path_637"
+                          data-name="Path 637"
+                          d="M30.177,30.839A.839.839,0,1,1,29.339,30,.839.839,0,0,1,30.177,30.839Z"
+                          transform="translate(-13.403 -14.064)"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="3"
+                        />
+                        <path
+                          id="Path_638"
+                          data-name="Path 638"
+                          d="M1.5,1.5H4.855L7.1,12.731a1.677,1.677,0,0,0,1.677,1.35h8.153a1.677,1.677,0,0,0,1.677-1.35l1.342-7.037H5.694"
+                          transform="translate(-1.5 -1.5)"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="3"
+                        />
+                      </g>
+                    </svg>
+                  }
+                  btnStyle={{
+                    width: "50%",
+                    justifyContent: "space-between",
+                  }}
+                />
+              ) : (
+                <Button className="out__of__stock__btn">Out of Stock</Button>
+              )}
             </div>
           </div>
         </div>
