@@ -6,7 +6,7 @@ $dark: #04dfe6;
 $highlite: #57d871;
 $blips: $font-color;
 $light-green: #f3f9f9;
-$nav-pills-link-active-bg: black !important;
+$nav-pills-link-active-bg: #eeeeee !important;
 $heading-font-size: 18px;
 $normal-font-size: 14px;
 $xl-heading: $heading-font-size + 5px;
@@ -364,15 +364,40 @@ body {
   height: 45px !important;
 }
 .cart__product__container {
-  border: 1px solid gray;
-  padding: 0.7em 0.7em;
-  margin-top: 1em;
-  background-color: #f8f8f8;
+  border: 1px solid $font-color;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: white;
   border-radius: 8px;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.cart__product__content__left {
+  display: flex;
+  flex: 1;
+  margin-right: 1em;
+}
+.cart__product__content__left img {
+  width: 120px;
+  border-radius: 8px;
+  margin-right: 1em;
+}
+.cart__product__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+.cart__product__content__top {
+  display: flex;
+  flex-direction: column;
+}
+.cart__product__content__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .cart__product__button__section {
   display: flex;
@@ -387,7 +412,6 @@ body {
   color: $font-color;
 }
 .cart__product__price {
-  margin-top: 1em;
   font-size: $heading-font-size;
   font-weight: bold;
 }
@@ -399,17 +423,23 @@ body {
 }
 .cart__product__delivery {
   font-size: $normal-font-size;
-  color: gray;
+  color: $font-color;
 }
 .cart__product__remove__btn {
   background-color: #d85757 !important;
-  padding: 1em 0em;
-  margin-top: 1em;
+  color: $primary !important;
+  height: 40px !important;
+  border-radius: 8px !important;
+  font-size: $normal-font-size !important;
+  margin-top: 2em;
+}
+.cart__product__remove__btn:hover {
+  background-color: darken(#d85757, 10%) !important;
 }
 .cart__product__content__right {
   display: flex;
   flex-direction: column;
-  padding: 0.5em 0.5em;
+  justify-content: space-between;
 }
 
 @media (max-width: 1220px) {

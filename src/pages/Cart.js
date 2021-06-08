@@ -12,9 +12,7 @@ export default function Cart() {
     <>
       <Header search={true} />
       <div className="container cart__container">
-        <div className="cart__container__header">
-          <div className="cart__container__header__heading">Cart</div>
-        </div>
+        <div className="cart__container__header__heading">Cart</div>
         <div className="cart__container__content">
           <div className="cart__container__content__left">
             <CartProduct />
@@ -22,10 +20,7 @@ export default function Cart() {
             <CartProduct />
             <CartProduct />
           </div>
-          <div className="cart__container__content__right">
-           
-          <CartProduct />
-          </div>
+          <div className="cart__container__content__right"></div>
         </div>
       </div>
       <Footer />

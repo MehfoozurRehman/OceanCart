@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import OrderPlaced from "./pages/OrderPlaced";
+import TrackOrder from "./pages/TrackOrder";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/product-details" component={ProductDetails} />
           <Route path="/cart" component={Cart} />
           <Route path="/order-placed" component={OrderPlaced} />
+          <Route path="/track-order" component={TrackOrder} />
         </Switch>
       </div>
     </Router>
