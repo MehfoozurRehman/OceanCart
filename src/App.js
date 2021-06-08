@@ -7,7 +7,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import ProductDetails from "./pages/ProductDetails";
-import cart from "./pages/Cart";
+import Cart from "./pages/Cart";
+import OrderPlaced from "./pages/OrderPlaced";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/signup" component={Signup} />
           <Route path="/forgot-password" component={ForgotPassword} />
           <Route path="/product-details" component={ProductDetails} />
-          <Route path="/cart" component={cart} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/order-placed" component={OrderPlaced} />
         </Switch>
       </div>
     </Router>
