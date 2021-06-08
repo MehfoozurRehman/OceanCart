@@ -363,6 +363,55 @@ body {
   color: $primary !important;
   height: 45px !important;
 }
+.cart__product__container {
+  border: 1px solid gray;
+  padding: 0.7em 0.7em;
+  margin-top: 1em;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cart__product__button__section {
+  display: flex;
+  flex-direction: row;
+}
+.cart__product__heading {
+  font-size: $heading-font-size;
+  font-weight: bold;
+}
+.cart__product__text {
+  font-size: $normal-font-size;
+  color: $font-color;
+}
+.cart__product__price {
+  margin-top: 1em;
+  font-size: $heading-font-size;
+  font-weight: bold;
+}
+.cart__product__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cart__product__delivery {
+  font-size: $normal-font-size;
+  color: gray;
+}
+.cart__product__remove__btn {
+  background-color: #d85757 !important;
+  padding: 1em 0em;
+  margin-top: 1em;
+}
+.cart__product__content__right {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0.5em;
+}
+
 @media (max-width: 1220px) {
   .gender__card {
     width: 48%;

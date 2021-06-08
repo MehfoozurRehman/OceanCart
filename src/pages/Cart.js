@@ -5,6 +5,7 @@ import { Link, Route, Switch } from "react-router-dom";
 import productImg from "../assets/productPic.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import CartProduct from "../components/CartProduct";
 
 export default function Cart() {
   return (
@@ -15,8 +16,16 @@ export default function Cart() {
           <div className="cart__container__header__heading">Cart</div>
         </div>
         <div className="cart__container__content">
-          <div className="cart__container__content__left"></div>
-          <div className="cart__container__content__right"></div>
+          <div className="cart__container__content__left">
+            <CartProduct />
+            <CartProduct />
+            <CartProduct />
+            <CartProduct />
+          </div>
+          <div className="cart__container__content__right">
+           
+          <CartProduct />
+          </div>
         </div>
       </div>
       <Footer />
