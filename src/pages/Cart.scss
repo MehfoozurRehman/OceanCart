@@ -19,6 +19,31 @@
   flex: 1;
   margin-right: 1em;
 }
-.cart__container__content__right {
+.cart__container__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex: 1;
+  border: 1px solid $font-color;
+  border-radius: 8px;
+  padding: 1em;
+}
+.cart__container__content__left__line {
+  border: 1px solid $font-color;
+  flex: 1;
+  margin: 1em;
+}
+.cart__container__content__right__line {
+  border: 1px solid $font-color;
+  border: hidden !important;
+  margin: 1em;
+}
+.cart__container__content__right__total {
+  font-size: $xl-heading;
+  font-weight: bold;
+  color: $highlite;
+}
+.cart__container__content__left__total {
+  font-size: $heading-font-size;
+  font-weight: bold;
 }

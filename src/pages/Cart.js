@@ -20,7 +20,24 @@ export default function Cart() {
             <CartProduct />
             <CartProduct />
           </div>
-          <div className="cart__container__content__right"></div>
+          <div className="cart__container__right">
+            <div className="cart__container__content__left">
+              <div className="cart__container__content__left__price">Price</div>
+              <div className="cart__container__content__left__shipping">
+                Shipping
+              </div>
+              <div className="cart__container__content__left__line"></div>
+              <div className="cart__container__content__left__total">Total</div>
+            </div>
+            <div className="cart__container__content__right">
+              <div className="cart__container__content__right__price">$32</div>
+              <div className="cart__container__content__right__shipping">
+                $8
+              </div>
+              <div className="cart__container__content__right__line"></div>
+              <div className="cart__container__content__right__total">$40</div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
