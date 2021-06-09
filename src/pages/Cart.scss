@@ -13,7 +13,6 @@
 .cart__container__content {
   display: flex;
   justify-content: space-between;
-  flex: 1;
 }
 .cart__container__content__left {
   flex: 1;
@@ -26,12 +25,13 @@
   flex: 1;
   border: 1px solid $font-color;
   border-radius: 8px;
-  padding: 1em;
+  align-items: center;
+  padding: 1.6em;
 }
 .cart__container__content__left__line {
   border: 1px solid $font-color;
   flex: 1;
-  margin: 1em;
+  margin: 0.8em;
 }
 .cart__container__content__right__line {
   border: 1px solid $font-color;
@@ -46,4 +46,50 @@
 .cart__container__content__left__total {
   font-size: $heading-font-size;
   font-weight: bold;
+}
+.cart__checkout {
+  flex: 1;
+}
+.payment__cart__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid $font-color;
+  border-radius: 8px;
+  padding: 1.6em;
+  margin-top: 1em;
+}
+.payment__cart__heading {
+  font-size: $heading-font-size;
+  font-weight: bold;
+}
+.payment__cart__text {
+  font-size: $normal-font-size;
+  margin-top: 1em;
+}
+.input__box__payment__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 8px;
+  height: 45px;
+  border: 1px solid $primary;
+  background-color: $primary;
+  padding: 0em 1.5em;
+  font-size: $normal-font-size;
+  outline: none;
+}
+.input__box__payment__card__input__field {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 8px;
+  height: 45px;
+  border: 1px solid $primary;
+  background-color: $primary;
+  padding: 0em 1.5em;
+  font-size: $normal-font-size;
+  outline: none;
 }
