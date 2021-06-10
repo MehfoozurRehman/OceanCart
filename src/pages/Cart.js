@@ -46,7 +46,7 @@ function PlaceOrderRow({ done, heading, info, extra, icon }) {
 export default function Cart() {
   return (
     <>
-      <Header search={true} />
+      <Header />
       <div className="container cart__container">
         <div className="cart__container__header__heading">Cart</div>
         <div className="cart__container__content">
