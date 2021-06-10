@@ -406,6 +406,7 @@ body {
 .cart__product__heading {
   font-size: $heading-font-size;
   font-weight: bold;
+  color: $font-color;
 }
 .cart__product__text {
   font-size: $normal-font-size;
@@ -414,6 +415,7 @@ body {
 .cart__product__price {
   font-size: $heading-font-size;
   font-weight: bold;
+  color: $font-color;
 }
 .cart__product__left {
   display: flex;
