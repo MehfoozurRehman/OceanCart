@@ -6,6 +6,7 @@ import BtnComponent from "./BtnComponent";
 
 export default function Header({ search }) {
   const [navbar, setNavbar] = useState(false);
+  const [explorePanel, setExplorePanel] = useState(false);
 
   const changeBackgrond = () => {
     if (window.scrollY > 0) {
@@ -43,14 +44,386 @@ export default function Header({ search }) {
         OC
       </Navbar.Brand>
       <div className="catagory__select">
-        <Select
-          // defaultValue={}
-          name="colors"
-          options={selectOptions}
-          className="select"
-          classNamePrefix="select"
-          placeholder="Explore"
-        />
+        <button
+          className="catagory__select__btn"
+          onClick={() => {
+            if (explorePanel == false) {
+              setExplorePanel(true);
+            } else if (explorePanel == true) {
+              setExplorePanel(false);
+            }
+          }}
+        >
+          <span>Explore</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8.624"
+            height="5.702"
+            viewBox="0 0 8.624 5.702"
+          >
+            <g id="down-arrow" transform="translate(0.539 0.5)">
+              <g
+                id="Group_157"
+                data-name="Group 157"
+                transform="translate(0 0)"
+              >
+                <path
+                  id="Path_635"
+                  data-name="Path 635"
+                  d="M7.454,117.442a.286.286,0,0,0-.445,0l-3.236,3.723L.537,117.442a.286.286,0,0,0-.445,0,.4.4,0,0,0,0,.511l3.459,3.979a.286.286,0,0,0,.445,0l3.459-3.979A.4.4,0,0,0,7.454,117.442Z"
+                  transform="translate(0 -117.336)"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="1"
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+        {explorePanel ? (
+          <ul className="catagory__select__links__list">
+            <li className="catagory__select__item">
+              <Link className="catagory__select__link">
+                <span>Toys</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8.624"
+                  height="5.702"
+                  viewBox="0 0 8.624 5.702"
+                >
+                  <g
+                    id="Group_157"
+                    data-name="Group 157"
+                    transform="translate(0.539 0.5)"
+                  >
+                    <path
+                      id="Path_635"
+                      data-name="Path 635"
+                      d="M7.454,117.442a.286.286,0,0,0-.445,0l-3.236,3.723L.537,117.442a.286.286,0,0,0-.445,0,.4.4,0,0,0,0,.511l3.459,3.979a.286.286,0,0,0,.445,0l3.459-3.979A.4.4,0,0,0,7.454,117.442Z"
+                      transform="translate(0 -117.336)"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </g>
+                </svg>
+              </Link>
+              <ul className="catagory__select__links__list__sub">
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="catagory__select__item">
+              <Link className="catagory__select__link">
+                <span>Baby</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8.624"
+                  height="5.702"
+                  viewBox="0 0 8.624 5.702"
+                >
+                  <g
+                    id="Group_157"
+                    data-name="Group 157"
+                    transform="translate(0.539 0.5)"
+                  >
+                    <path
+                      id="Path_635"
+                      data-name="Path 635"
+                      d="M7.454,117.442a.286.286,0,0,0-.445,0l-3.236,3.723L.537,117.442a.286.286,0,0,0-.445,0,.4.4,0,0,0,0,.511l3.459,3.979a.286.286,0,0,0,.445,0l3.459-3.979A.4.4,0,0,0,7.454,117.442Z"
+                      transform="translate(0 -117.336)"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </g>
+                </svg>
+              </Link>
+              <ul className="catagory__select__links__list__sub">
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="catagory__select__item">
+              <Link className="catagory__select__link">
+                <span>Woman</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8.624"
+                  height="5.702"
+                  viewBox="0 0 8.624 5.702"
+                >
+                  <g
+                    id="Group_157"
+                    data-name="Group 157"
+                    transform="translate(0.539 0.5)"
+                  >
+                    <path
+                      id="Path_635"
+                      data-name="Path 635"
+                      d="M7.454,117.442a.286.286,0,0,0-.445,0l-3.236,3.723L.537,117.442a.286.286,0,0,0-.445,0,.4.4,0,0,0,0,.511l3.459,3.979a.286.286,0,0,0,.445,0l3.459-3.979A.4.4,0,0,0,7.454,117.442Z"
+                      transform="translate(0 -117.336)"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </g>
+                </svg>
+              </Link>
+              <ul className="catagory__select__links__list__sub">
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="catagory__select__item">
+              <Link className="catagory__select__link">
+                <span>Man</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8.624"
+                  height="5.702"
+                  viewBox="0 0 8.624 5.702"
+                >
+                  <g
+                    id="Group_157"
+                    data-name="Group 157"
+                    transform="translate(0.539 0.5)"
+                  >
+                    <path
+                      id="Path_635"
+                      data-name="Path 635"
+                      d="M7.454,117.442a.286.286,0,0,0-.445,0l-3.236,3.723L.537,117.442a.286.286,0,0,0-.445,0,.4.4,0,0,0,0,.511l3.459,3.979a.286.286,0,0,0,.445,0l3.459-3.979A.4.4,0,0,0,7.454,117.442Z"
+                      transform="translate(0 -117.336)"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </g>
+                </svg>
+              </Link>
+              <ul className="catagory__select__links__list__sub">
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="catagory__select__item">
+              <Link className="catagory__select__link">
+                <span>Health</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8.624"
+                  height="5.702"
+                  viewBox="0 0 8.624 5.702"
+                >
+                  <g
+                    id="Group_157"
+                    data-name="Group 157"
+                    transform="translate(0.539 0.5)"
+                  >
+                    <path
+                      id="Path_635"
+                      data-name="Path 635"
+                      d="M7.454,117.442a.286.286,0,0,0-.445,0l-3.236,3.723L.537,117.442a.286.286,0,0,0-.445,0,.4.4,0,0,0,0,.511l3.459,3.979a.286.286,0,0,0,.445,0l3.459-3.979A.4.4,0,0,0,7.454,117.442Z"
+                      transform="translate(0 -117.336)"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </g>
+                </svg>
+              </Link>
+              <ul className="catagory__select__links__list__sub">
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+                <li className="catagory__select__item__sub">
+                  <Link className="catagory__select__link__sub">Toys</Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        ) : null}
       </div>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
