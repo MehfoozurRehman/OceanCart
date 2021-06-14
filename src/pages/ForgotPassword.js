@@ -3,7 +3,6 @@ import "./Auth.scss";
 import Header from "../components/Header";
 import HomeBG from "../assets/HomeBG.png";
 import InputBox from "../components/InputBox";
-import LoginButton from "../components/BtnComponent";
 import { Link } from "react-router-dom";
 import BtnComponent from "../components/BtnComponent";
 

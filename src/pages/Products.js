@@ -1,7 +1,7 @@
 import React from "react";
 import "./Products.scss";
-import { Accordion, Nav, Button } from "react-bootstrap";
-import { Link, Route, Switch } from "react-router-dom";
+import { Accordion, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import productImg from "../assets/productPic.png";
 import Header from "../components/Header";
