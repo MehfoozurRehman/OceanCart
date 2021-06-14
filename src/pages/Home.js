@@ -53,14 +53,9 @@ export default function Home() {
       <div className="container">
         <div className="product__catagories">
           <div className="product__catagories__header">
-            <Nav activeKey="/home">
+            <Nav activeKey="/">
               <Nav.Item>
-                <Nav.Link
-                  href="/home"
-                  as={Link}
-                  to="/"
-                  className="nav__link__vertical"
-                >
+                <Nav.Link as={Link} to="/" className="nav__link__vertical">
                   Watches
                 </Nav.Link>
               </Nav.Item>
