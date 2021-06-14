@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.scss";
 import { Accordion, Nav, Button } from "react-bootstrap";
 import { Link, Route, Switch } from "react-router-dom";
@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CartProduct from "../components/CartProduct";
 import BtnComponent from "../components/BtnComponent";
+import Select from "react-select";
 
 function PlaceOrderRow({ done, heading, info, extra, icon }) {
   return (
@@ -44,6 +45,12 @@ function PlaceOrderRow({ done, heading, info, extra, icon }) {
 }
 
 export default function Cart() {
+  const [coupon, setCoupon] = useState(false);
+  const Options = [
+    { value: "Fixed Cart Discount", label: "Fixed Cart Discount" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
   return (
     <>
       <Header />
@@ -57,35 +64,45 @@ export default function Cart() {
             <CartProduct />
           </div>
           <div className="cart__container__content__right">
+            <div className="cart__container__content__right__card">
+              <div className="cart__container__content__right__card__row">
+                <span className="cart__container__content__right__card__row__left">
+                  Price
+                </span>
+                <span className="cart__container__content__right__card__row__right">
+                  $42
+                </span>
+              </div>
+              <div className="cart__container__content__right__card__row">
+                <span className="cart__container__content__right__card__row__left">
+                  Shipping
+                </span>
+                <span className="cart__container__content__right__card__row__right">
+                  $12
+                </span>
+              </div>
+              {coupon ? (
+                <div className="cart__container__content__right__card__row">
+                  <span className="cart__container__content__right__card__row__left">
+                    Coupon( TAV20 )
+                  </span>
+                  <span className="cart__container__content__right__card__row__right">
+                    -$10
+                  </span>
+                </div>
+              ) : null}
+              <div className="cart__container__content__right__card__line"></div>
+              <div className="cart__container__content__right__card__row">
+                <span className="cart__container__content__right__card__row__left">
+                  Total
+                </span>
+                <span className="cart__container__content__right__card__row__right__important">
+                  $44
+                </span>
+              </div>
+            </div>
             <Switch>
               <Route path="/cart" exact>
-                <div className="cart__container__content__right__card">
-                  <div className="cart__container__content__right__card__row">
-                    <span className="cart__container__content__right__card__row__left">
-                      Price
-                    </span>
-                    <span className="cart__container__content__right__card__row__right">
-                      $42
-                    </span>
-                  </div>
-                  <div className="cart__container__content__right__card__row">
-                    <span className="cart__container__content__right__card__row__left">
-                      Shipping
-                    </span>
-                    <span className="cart__container__content__right__card__row__right">
-                      $12
-                    </span>
-                  </div>
-                  <div className="cart__container__content__right__card__line"></div>
-                  <div className="cart__container__content__right__card__row">
-                    <span className="cart__container__content__right__card__row__left">
-                      Total
-                    </span>
-                    <span className="cart__container__content__right__card__row__right__important">
-                      $54
-                    </span>
-                  </div>
-                </div>
                 <form className="cart__container__content__right__form">
                   <div className="cart__container__content__right__form__heading">
                     Pay with card
@@ -244,29 +261,6 @@ export default function Cart() {
                       </svg>
                     </div>
                   </div>
-                  <div
-                    className="cart__container__content__right__form__row"
-                    style={{ marginBottom: ".8em" }}
-                  >
-                    <label
-                      htmlFor="address"
-                      className="cart__container__content__right__form__label"
-                    >
-                      Delivery Address
-                    </label>
-                    <BtnComponent
-                      placeholder="Add"
-                      btnStyle={{ maxHeight: "30px", height: "30px" }}
-                      type="button"
-                    />
-                  </div>
-                  <div className="cart__container__content__right__form__input__box">
-                    <input
-                      type="text"
-                      className="cart__container__content__right__form__input__field"
-                      placeholder="3704  Seltice Way, Holbrook"
-                    />
-                  </div>
                   <label
                     htmlFor="coupon"
                     className="cart__container__content__right__form__label"
@@ -281,6 +275,200 @@ export default function Cart() {
                     />
                   </div>
                   <Link
+                    to="/cart/delivery-info"
+                    className="cart__container__content__right__form__link__btn"
+                  >
+                    <BtnComponent
+                      placeholder="Next"
+                      btnStyle={{ width: "100%" }}
+                      type="button"
+                      onClick={() => {
+                        setCoupon(true);
+                      }}
+                    />
+                  </Link>
+                </form>
+              </Route>
+              <Route path="/cart/delivery-info">
+                <form className="cart__container__content__right__form">
+                  <div className="cart__container__content__right__form__heading">
+                    Add Delivery Information
+                  </div>
+                  <div className="cart__container__content__right__form__row">
+                    <div
+                      className=""
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        flex: 1,
+                      }}
+                    >
+                      <label
+                        htmlFor="Card"
+                        className="cart__container__content__right__form__label"
+                      >
+                        First Name
+                      </label>
+                      <div className="cart__container__content__right__form__input__box">
+                        <input
+                          type="text"
+                          className="cart__container__content__right__form__input__field"
+                          placeholder="First Name"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className=""
+                      style={{
+                        width: "20px",
+                      }}
+                    ></div>
+                    <div
+                      className=""
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        flex: 1,
+                      }}
+                    >
+                      <label
+                        htmlFor="Card"
+                        className="cart__container__content__right__form__label"
+                      >
+                        Last Name
+                      </label>
+                      <div className="cart__container__content__right__form__input__box">
+                        <input
+                          type="text"
+                          className="cart__container__content__right__form__input__field"
+                          placeholder="Last Name"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <label
+                    htmlFor="Card"
+                    className="cart__container__content__right__form__label"
+                  >
+                    Address (PO box is not allowed)
+                  </label>
+                  <div className="cart__container__content__right__form__input__box">
+                    <input
+                      type="text"
+                      className="cart__container__content__right__form__input__field"
+                      placeholder="Address"
+                    />
+                  </div>
+                  <label
+                    htmlFor="Card"
+                    className="cart__container__content__right__form__label"
+                  >
+                    Apartment, Suite (Optional)
+                  </label>
+                  <div className="cart__container__content__right__form__input__box">
+                    <input
+                      type="text"
+                      className="cart__container__content__right__form__input__field"
+                      placeholder="Apartment, Suite"
+                    />
+                  </div>
+                  <label
+                    htmlFor="Card"
+                    className="cart__container__content__right__form__label"
+                  >
+                    Select Your City
+                  </label>
+                  <Select
+                    // defaultValue={[colourOptions[2], colourOptions[3]]}
+                    name="colors"
+                    options={Options}
+                    className="basic-multi-select"
+                    classNamePrefix="select"
+                  />
+                  <div
+                    className="cart__container__content__right__form__row"
+                    style={{ marginTop: ".5em" }}
+                  >
+                    <div
+                      className=""
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        flex: 1,
+                        marginBottom: ".5em",
+                      }}
+                    >
+                      <label
+                        htmlFor="Card"
+                        className="cart__container__content__right__form__label"
+                      >
+                        Select Your Country
+                      </label>
+                      <Select
+                        // defaultValue={[colourOptions[2], colourOptions[3]]}
+                        name="colors"
+                        options={Options}
+                        className="basic-multi-select"
+                        classNamePrefix="select"
+                      />
+                    </div>
+                    <div
+                      className=""
+                      style={{
+                        width: "20px",
+                      }}
+                    ></div>
+                    <div
+                      className=""
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        flex: 1,
+                        marginBottom: ".5em",
+                      }}
+                    >
+                      <label
+                        htmlFor="Card"
+                        className="cart__container__content__right__form__label"
+                      >
+                        Select Your Emirate
+                      </label>
+                      <Select
+                        // defaultValue={[colourOptions[2], colourOptions[3]]}
+                        name="colors"
+                        options={Options}
+                        className="basic-multi-select"
+                        classNamePrefix="select"
+                      />
+                    </div>
+                  </div>
+                  <label
+                    htmlFor="coupon"
+                    className="cart__container__content__right__form__label"
+                  >
+                    Phone No.
+                  </label>
+                  <div className="cart__container__content__right__form__input__box">
+                    <input
+                      type="text"
+                      className="cart__container__content__right__form__input__field"
+                      placeholder="Phone"
+                    />
+                  </div>
+                  <label
+                    htmlFor="coupon"
+                    className="cart__container__content__right__form__label"
+                  >
+                    Email
+                  </label>
+                  <div className="cart__container__content__right__form__input__box">
+                    <input
+                      type="text"
+                      className="cart__container__content__right__form__input__field"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <Link
                     to="/cart/place-order"
                     className="cart__container__content__right__form__link__btn"
                   >
@@ -288,6 +476,9 @@ export default function Cart() {
                       placeholder="Next"
                       btnStyle={{ width: "100%" }}
                       type="button"
+                      onClick={() => {
+                        setCoupon(true);
+                      }}
                     />
                   </Link>
                 </form>
